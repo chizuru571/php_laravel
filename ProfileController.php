@@ -19,10 +19,10 @@ class ProfileController extends Controller
         // Validationを行う
         $this->validate($request, Profiles::$rules);
 
-        $profile = new Profilesg;
+        $profile = new Profiles;
         $form = $request->all();
 
-        // フォームから送信されてきた_tokenを削除する
+        // フォームから送信されてきた_tokenを削除
         unset($form['_token']);
 
         // データベースに保存する
